@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name= "author" content= "Jake Christensen CS User: jakec"></meta>
+    <title>Dijkstra's Algorithm</title>
+
+    <style>
+    #paragraph1 {
+    font-weight: bold;
+    border-style: solid;}
+
+    #paragraph0 {
+    background-color: rgb(255,160,122);
+    border-style: solid;
+    }
+
+    #divID{
+    background-color: rgb(255,160,122);
+    border-style: solid;
+    }
+
+    h1{
+        color: black;
+        font-family: copperplate;
+        font-weight: bold;
+        background-color: lightblue;
+        border-style: solid;
+        border-width: thick;
+        text-decoration: underline;
+    }
+    </style>
+</head>
+
+<body>
+<h1> Dijkstra's Algorithm - </h1>
+<div id="divID">
+    <h4>Sections homie: </h4>
+    <h5>1. What is Dijkstra's Algorithm</h5>
+    <h5>2. Pseudo code of Dijkstra's algorithm.</h5>
+    <h5>3. Image of Dijkstra's Algorithm.</h5>
+</div>
+<br><br>
+<h1>What is Dijkstra's Algorithm? </h1>
+<div>
+    <p id="paragraph0">
+        Dijkstra's Algorithm is an algorithm for finding the shortest paths between nodes in a graph. For a given source node in the graph, the algorithm finds the shortest path between that node and every other node. It can also be used for finding the shortest paths from a single node to a single destination node by stopping the algorithm once the fastest route to the destination node has been determined.
+    </p>
+</div>
+<br><br>
+
+<h1> Pseudo code of Dijkstra's algorithm:</h1>
+<div style="background-color: rgb(255,160,122)" padding="15px">
+    <p id="paragraph1">
+        <b>function dijkstra(G, S)</b><br>
+    <br>for each vertex V in G<br>
+    distance[V] <- infinite<br>
+    previous[V] <- NULL<br>
+    If V != S, add V to Priority Queue Q<br>
+    distance[S] <- 0<br>
+    <br>
+    while Q IS NOT EMPTY<br>
+    U <- Extract MIN from Q<br>
+    for each unvisited neighbour V of U<br>
+    tempDistance <- distance[U] + edge_weight(U, V)<br>
+    if tempDistance < distance[V]<br>
+    distance[V] <- tempDistance<br>
+    previous[V] <- U<br>
+        <br>return distance[], previous[]<br>
+</p>
+</div>
+<br><br>
+<h1>Image Representation of the Dijkstra Algorithm: </h1>
+<div style="padding: 10px;">
+    <img src="dijkstraalgorithmimage.png" style="border: 1px solid;">
+</div>
+
+<h3>
+    <a href = "https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/">
+        To learn more about Dijkstra's algorithm click on me! </a>
+
+</h3>
+
+
+</body>
+
+
+
+</html>
